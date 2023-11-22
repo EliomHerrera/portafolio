@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        padding: 20px;
+        margin: 2px;
+        background-color: rgb(17, 17, 19);
+    }
+
+    .nav a {
+        padding: 10px;
+        text-decoration: none;
+        color: black;
+        background: white;
+    }
+
+    .nav a:hover {
+        background: rgb(202, 18, 18);
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .m-drop {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .m-drop a {
+        text-decoration: none;
+        text-align: center;
+    }
+
+    button {
+        border: none;
+        background: black;
+        padding: 10px;
+        color: white;
+        margin: 1px;
+
+    }
+
+    div a {
+        background: blue;
+        padding: 10px;
+        width: 59px;
+        color: white;
+        margin: 1px;
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <h1>Hello World</h1>
+        <p>Eliom</p>
+    </div>
+
+    <div>
+        <nav class="nav">
+            <a href="/index.html">Inicio</a>
+        </nav>
+    </div>
+
+    <div>
+        <button onclick="xActive()" class="btn">dropdown</button>
+        <div class="d-none">
+            <a href="#">home</a>
+            <a href="#">about</a>
+            <a href="#">info</a>
+        </div>
+    </div>
+</body>
+
+<script>
+    let btn = document.querySelector('.btn')
+
+    let x = 0
+
+    function xActive() {
+
+        if (x == 0) {
+            btn.nextElementSibling.classList.remove("d-none")
+            btn.nextElementSibling.classList.add("m-drop")
+            x++
+            return
+        }
+
+        if (x == 1) {
+            btn.nextElementSibling.classList.add("d-none")
+            btn.nextElementSibling.classList.remove("m-drop")
+            x--
+            return
+        }
+    }
+
+</script>
+
+</html>
