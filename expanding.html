@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        padding: 20px;
+        margin: 2px;
+        background-color: rgb(17, 17, 19);
+    }
+
+    .nav a {
+        padding: 10px;
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        background: white;
+    }
+
+    .nav a:hover {
+        background: rgb(202, 18, 18);
+    }
+
+    .content-img {
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .content-img img {
+        margin: 5px;
+        border-radius: 10%;
+    }
+
+    .active-img {
+        width: 250px;
+        transition: 1.5s;
+
+    }
+
+    .panel-img {
+        position: relative;
+    }
+
+    .panel-img h3 {
+        position: absolute;
+        color: rgb(255, 255, 255);
+        bottom: 25px;
+        left: 10px;
+    }
+
+    .xText {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <h1>Hello World</h1>
+        <p>Eliom</p>
+        <nav class="nav">
+            <a href="/index.html">Inicio</a>
+        </nav>
+    </div>
+    <div class="content-img">
+        <div class="panel-img">
+            <img class="active-img" src="/img/rengoku (1).jpg" width="40" height="200" />
+            <h3 class="">Imagen 1</h3>
+        </div>
+        <div class="panel-img">
+            <img src="/img/rengoku (2).jpg" width="40" height="200" />
+            <h3 class="xText">Imagen 2</h3>
+        </div>
+        <div class="panel-img">
+            <img src="/img/rengoku (3).jpg" width="40" height="200" />
+            <h3 class="xText">Imagen 3</h3>
+        </div>
+        <div class="panel-img">
+            <img src="/img/rengoku (5).jpg" width="40" height="200" />
+            <h3 class="xText">Imgaen 4</h3>
+        </div>
+    </div>
+</body>
+
+<script>
+    let images = document.querySelectorAll('.panel-img > img')
+
+    images.forEach(i => {
+        i.addEventListener("click", () => {
+            xActive()
+
+            i.classList.add('active-img')
+            i.nextElementSibling.classList.remove("xText")
+            console.log(i)
+        })
+    })
+
+    function xActive() {
+        images.forEach(i => {
+            i.classList.remove('active-img')
+        })
+        images.forEach(i => {
+            i.nextElementSibling.classList.add('xText')
+        })
+    }
+
+
+
+</script>
+
+</html>

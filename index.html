@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        padding: 20px;
+        margin: 2px;
+        background-color: rgb(17, 17, 19);
+    }
+
+    .nav a {
+        padding: 10px;
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        background: white;
+    }
+
+    .nav a:hover {
+        background: rgb(202, 18, 18);
+    }
+
+    center {
+        margin: 40px 80px;
+    }
+
+    center h2 {
+        margin: 20px;
+    }
+
+    center h3 {
+        margin: 20px;
+    }
+
+    .medio-lento {
+        font-size: 18px;
+        transition: all 1s ease;
+    }
+
+    .medio-lento strong {
+        color: blue;
+        transition: all 1s ease;
+
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <h1>Hello World</h1>
+        <p>Eliom</p>
+    </div>
+    <div>
+        <nav class="nav">
+            <a href="/acordeon.html">Acordeon</a>
+            <a href="/expanding.html">Expanding</a>
+            <a href="/progress.html">Progress</a>
+            <a href="/menuRotate.html">MenuRotate</a>
+        </nav>
+    </div>
+    <div>
+        <center>
+            <h2>
+                Esta Es Mi Bienbenida
+            </h2>
+            <h3>
+                ¡Saludos! Soy <strong>Vidal Herrera</strong>, desarrollador web de 30 años, y este espacio es mi
+                escaparate
+                digital.
+            </h3>
+            <p>
+                Cada proyecto que encuentres aquí es una pieza cuidadosamente diseñada que refleja mi dedicación al arte
+                del
+                desarrollo web. Desde sitios elegantes hasta aplicaciones dinámicas, cada línea de código cuenta una
+                historia de innovación y excelencia. Más que una cartera, este sitio es una invitación a explorar mi
+                mundo
+                digital. Estoy abierto a colaboraciones y oportunidades emocionantes que impulsen mi carrera al
+                siguiente
+                nivel. ¡Gracias por visitar y ser parte de mi viaje digital!
+            </p>
+        </center>
+
+    </div>
+</body>
+
+<script>
+    let center = document.querySelector('center')
+
+    setTimeout(() => {
+        if (center) {
+            center.classList.add('medio-lento')
+        }
+    }, 1000)
+</script>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .panel {
+        background: rgb(31, 31, 31);
+        color: white;
+        padding: 10px;
+        margin: 2px;
+    }
+
+    .panel p {
+        background: rgb(136, 127, 127);
+        color: black;
+        padding: 20px;
+    }
+
+    .acordeon {
+        margin: 5px;
+    }
+
+    .active {
+        border: red solid 5px;
+        transition: .4s;
+
+    }
+
+    .disable-text {
+        display: none;
+    }
+
+    .nav {
+        padding: 20px;
+        margin: 2px;
+        background-color: rgb(17, 17, 19);
+    }
+
+    .nav a {
+        padding: 10px;
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        background: white;
+    }
+
+    .nav a:hover {
+        background: rgb(202, 18, 18);
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <h1>Acordeon</h1>
+        <p>Eliom</p>
+        <nav class="nav">
+            <a href="/index.html">Inicio</a>
+        </nav>
+    </div>
+    <div class="panel active">
+        <h2 class="acordeon ">Provando</h2>
+        <p class="">Solo estoy provando</p>
+    </div>
+    <div class="panel">
+        <h2 class="acordeon">Provando</h2>
+        <p class="disable-text">Solo estoy provando</p>
+    </div>
+    <div class="panel">
+        <h2 class="acordeon">Provando</h2>
+        <p class="disable-text">Solo estoy provando</p>
+    </div>
+</body>
+
+<script>
+    let acordeon = document.querySelectorAll('.panel')
+    let textAcordeon = document.querySelectorAll('.panel > p')
+
+    acordeon.forEach(i => {
+        i.addEventListener("click", () => {
+            xActive()
+            i.classList.add('active')
+            i.children[1].classList.remove('disable-text')
+        })
+    })
+
+    function xActive() {
+        acordeon.forEach(i => {
+            i.classList.remove('active')
+        })
+        textAcordeon.forEach(i => {
+            i.classList.add('disable-text')
+        })
+    }
+
+
+</script>
+
+</html>

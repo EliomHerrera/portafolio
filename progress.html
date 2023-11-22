@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .nav {
+            padding: 20px;
+            margin: 2px;
+            background-color: rgb(17, 17, 19);
+        }
+
+        .nav a {
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            color: black;
+            background: white;
+        }
+
+        .nav a:hover {
+            background: rgb(202, 18, 18);
+        }
+
+        .circle {
+            width: 20px;
+            background: white;
+            border: solid rgba(128, 128, 128, 0.411) 2px;
+            border-radius: 100%;
+            text-align: center;
+            color: gray;
+        }
+
+        .circle-line {
+            width: 50px;
+            height: 0px;
+            border: 2px solid rgba(128, 128, 128, 0.411);
+        }
+
+        .panel {
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            border: none;
+            margin: 2px;
+            padding: 15px;
+            border-radius: 5%;
+            background: gray;
+            color: white;
+        }
+
+        .btn:hover {
+            background: rgb(61, 61, 170);
+        }
+
+        .active {
+            border: solid 2px rgb(62, 197, 221);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <h1>Hello World</h1>
+
+        <p>Eliom</p>
+
+        <nav class="nav">
+            <a href="/index.html">Inicio</a>
+        </nav>
+    </div>
+
+    <div class="panel">
+
+        <div class="circle active">1</div>
+        <div class="circle-line"></div>
+        <div class="circle">2</div>
+        <div class="circle-line"></div>
+        <div class="circle">3</div>
+        <div class="circle-line"></div>
+        <div class="circle">4</div>
+
+    </div>
+
+    <div class="cont-btn">
+        <button class="btn" onclick="delActive()"> Retroceder </button>
+        <button class="btn" onclick="addActive()"> Adelantar </button>
+    </div>
+
+    <script>
+        let circle = document.querySelectorAll('.circle')
+        let btn = document.querySelectorAll('.btn')
+
+        let x = 0
+
+        function delActive() {
+            if (x > 0) {
+                circle[x].classList.remove("active")
+                circle[x].previousElementSibling.classList.remove("active")
+                x--
+            }
+        }
+
+        function addActive() {
+            if (x < circle.length - 1) {
+                circle[x + 1].classList.add("active")
+                circle[x].nextElementSibling.classList.add("active")
+                x++
+            }
+        }
+
+    </script>
+</body>
+
+</html>
