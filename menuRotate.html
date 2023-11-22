@@ -11,12 +11,21 @@
     * {
         margin: 0;
         padding: 0;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .sticky {
+        position: sticky;
+        top: 0;
+        width: 1%;
     }
 
     .nav {
         padding: 20px;
         margin: 2px;
         background-color: rgb(17, 17, 19);
+        display: flex;
+        justify-content: center;
     }
 
     .nav a {
@@ -30,6 +39,69 @@
     .nav a:hover {
         background: rgb(202, 18, 18);
     }
+
+    .st {
+        width: 100%;
+    }
+
+    .m-rotate {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 100%;
+        bottom: 0px;
+        right: 50px;
+    }
+
+    .rotate {
+        position: absolute;
+        bottom: 10px;
+        right: 40px;
+        color: white;
+        font-size: 28px;
+        padding: 20px;
+    }
+
+    .rotate-1 {
+        position: absolute;
+        top: 25px;
+        left: 50px;
+        color: white;
+    }
+
+    .rotar {
+        transition: all 1s ease;
+        transform: rotate(0.5turn);
+    }
+
+    .rotar-inc {
+        transition: all 1s ease;
+        transform: rotate(0.0turn);
+    }
+
+    svg {
+        width: 40px;
+    }
+
+    .c-falso {
+        margin: 0px 120px;
+    }
+
+    .c-falso h1 {
+        margin-bottom: 40px;
+    }
+
+    .c-img {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+    }
+
+    img {
+        width: 60%;
+        height: 30%;
+    }
 </style>
 
 <body>
@@ -37,19 +109,86 @@
         <h1>Hello World</h1>
         <p>Eliom</p>
     </div>
-    <div>
+    <div class="st">
         <nav class="nav">
             <a href="/index.html">Inicio</a>
-
         </nav>
     </div>
-    <div>
 
+
+    <div class="sticky">
+        <div class="m-rotate">
+            <div class="rotate">X</div>
+            <div class="rotate-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </div>
+        </div>
     </div>
+
+    <div class="c-falso">
+        <pre>
+            --->Por favor has scroll 
+            luego preciona el boton "Azul"</pre>
+        <h1>Pagina De Prueva</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perspiciatis ut deleniti quod quo quia
+            assumenda magni, dignissimos animi laudantium quisquam hic ratione illo autem commodi? Accusamus totam
+            dolorem aperiam!
+            Esse minus deleniti laudantium voluptatum nostrum quisquam necessitatibus earum. Ex assumenda iusto dolorem
+            quisquam rerum aliquid adipisci natus, atque ad impedit eaque quas quod sed tempore harum magnam quibusdam
+            fuga?
+            Autem architecto exercitationem temporibus, ducimus sapiente quo nisi ex cupiditate recusandae consectetur
+            tenetur sint porro dolores, sit mollitia? Cum architecto omnis obcaecati ex odio minima inventore aspernatur
+            officia, corporis ab.
+        </p>
+
+        <div class="c-img">
+            <img src="/img/rengoku (6).jpg" />
+        </div>
+
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore perspiciatis ut deleniti quod quo quia
+            assumenda magni, dignissimos animi laudantium quisquam hic ratione illo autem commodi? Accusamus totam
+            dolorem aperiam!
+            Esse minus deleniti laudantium voluptatum nostrum quisquam necessitatibus earum. Ex assumenda iusto dolorem
+            quisquam rerum aliquid adipisci natus, atque ad impedit eaque quas quod sed tempore harum magnam quibusdam
+            fuga?
+            Autem architecto exercitationem temporibus, ducimus sapiente quo nisi ex cupiditate recusandae consectetur
+            tenetur sint porro dolores, sit mollitia? Cum architecto omnis obcaecati ex odio minima inventore aspernatur
+            officia, corporis ab.
+        </p>
+    </div>
+
 </body>
 
 <script>
-    console.log('run')
+    let rotate = document.querySelector('.m-rotate')
+    let st = document.querySelector('.st')
+
+    let x = 0
+
+    rotate.addEventListener("click", () => {
+
+        if (x == 0) {
+            rotate.classList.add("rotar")
+            st.classList.add("sticky")
+            rotate.classList.remove("rotar-inc")
+
+            x++
+            return
+        }
+
+        if (x == 1) {
+            rotate.classList.remove("rotar")
+            st.classList.remove("sticky")
+            rotate.classList.add("rotar-inc")
+            x--
+            return
+        }
+    })
 </script>
 
 </html>
