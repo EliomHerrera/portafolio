@@ -64,6 +64,45 @@
         color: white;
         margin: 1px;
     }
+
+    .d-b {
+        width: 116px;
+    }
+
+    li {
+        display: none;
+        list-style: none;
+        color: white;
+        width: 96px;
+        padding: 10px;
+        margin: 1px;
+        text-align: center;
+        background-color: black;
+    }
+
+    li:hover {
+        background-color: blue;
+        color: white;
+        /* border: white 1px solid; */
+    }
+
+    .fle {
+        display: flex;
+    }
+
+    .m-d {
+        width: 120px;
+    }
+
+    .m-d:hover .c-li {
+        transition: all 1s;
+        width: 116px;
+        /* background: black; */
+    }
+
+    .m-d:hover li {
+        display: block;
+    }
 </style>
 
 <body>
@@ -78,14 +117,26 @@
         </nav>
     </div>
 
-    <div>
-        <button onclick="xActive()" class="btn">dropdown</button>
-        <div class="d-none">
-            <a href="#">home</a>
-            <a href="#">about</a>
-            <a href="#">info</a>
+    <div class="fle">
+        <div>
+            <button onclick="xActive()" class="btn">dropdown</button>
+            <div class="d-none">
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">info</a>
+            </div>
+        </div>
+
+        <div class="m-d">
+            <button class="d-b">dropdown hover</button>
+            <div class="c-li">
+                <li>home</li>
+                <li>about</li>
+                <li>info</li>
+            </div>
         </div>
     </div>
+
 </body>
 
 <script>
