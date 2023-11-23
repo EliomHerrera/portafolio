@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgba(137, 137, 211, 0.342);
+        }
+
+        .nav {
+            padding: 20px;
+            margin: 2px;
+            background-color: rgb(17, 17, 19);
+        }
+
+        .nav a {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            background: white;
+
+        }
+
+        .nav a:hover {
+            background: coral;
+        }
+
+        .cont {
+            display: flex;
+            height: 400px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .h2 {
+                margin-top: 100px;
+            }
+
+            #c-tx {
+                border: 2px solid gray;
+                box-shadow: 15px 15px 30px #888888;
+                margin: 40px 0px;
+                padding: 20px;
+                width: 400px;
+                height: 100px;
+                background: white;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>Eliom</p>
+        <nav class="nav">
+            <a href="/index.html">Inicio</a>
+        </nav>
+    </div>
+
+    <div class="cont">
+        <h2 class="h2">Frace Del Dia</h2>
+
+        <div class="cont">
+            <h3 id="c-tx">
+                La mejor frace para motivar tu dia
+            </h3>
+        </div>
+    </div>
+
+
+
+</body>
+
+<script>
+    let oraciones = ['La única limitación que tienes es la que te pones a ti mismo.', 'Cada día es una nueva oportunidad para cambiar tu vida.', 'No te preocupes por el pasado, concéntrate en construir tu futuro.', 'Las dificultades de hoy son solo la preparación para los éxitos del mañana.', 'Cree en ti mismo y todo será posible.', 'El progreso no es rápido ni fácil, pero es posible.', 'No te compares con otros; compite contigo mismo.', 'La paciencia es la clave del éxito.', 'Cada pequeño paso te acerca a grandes logros.', 'La actitud positiva puede cambiar tu vida.', 'No tengas miedo de los cambios, son la puerta de entrada al crecimiento.', 'Aprende de tus errores; son lecciones valiosas.', 'Lo que piensas, lo creas. Lo que sientes, lo atraes. Lo que imaginas, lo creas.', 'La persistencia vence la resistencia.', 'La clave está en no detenerse nunca.', 'Tu vida mejora cuando tú decides mejorar.', 'No hay éxito sin esfuerzo.', 'El éxito no es final, el fracaso no es fatal: es el coraje de continuar lo que cuenta.', 'La única forma de hacer un gran trabajo es amar lo que haces.', 'Cada día es una página en tu historia de éxito.', 'La felicidad no es algo que pospones para el futuro; es algo que diseñas para el presente.', 'No busques fuera, todo lo que necesitas está dentro de ti.', 'No puedes controlar todo, pero siempre puedes controlar tu reacción.', 'El cambio comienza en tu mente.', 'Si puedes soñarlo, puedes lograrlo.', 'No seas prisionero de tu pasado, sé arquitecto de tu futuro.', 'La vida es demasiado corta para perder el tiempo en preocupaciones.', 'La mejor manera de predecir el futuro es crearlo.', 'La fuerza no viene de lo que puedes hacer, sino de superar lo que pensabas que no podías.', 'La felicidad es una elección, no una consecuencia.', 'Ama lo que tienes mientras trabajas para lo que quieres.', 'El único lugar donde el éxito viene antes que el trabajo es en el diccionario.', 'La mente es todo. Lo que piensas, te conviertes.', 'Haz hoy lo que otros no quieren, haz mañana lo que otros no pueden.', 'Nunca es tarde para ser lo que podrías haber sido.', 'El éxito es la suma de pequeños esfuerzos repetidos día tras día.', 'La mejor venganza es un éxito masivo.', 'No hay ascensor hacia el éxito, debes tomar las escaleras.', 'Si no te gusta algo, cámbialo. Si no puedes cambiarlo, cambia tu actitud.', 'La vida es 10% lo que nos sucede y 90% cómo reaccionamos.', 'La disciplina es el puente entre metas y logros.', 'La confianza en uno mismo es el primer secreto del éxito.', 'No busques el éxito, busca ser valioso. El éxito lo seguirá.', 'No te preocupes por los fracasos, preocúpate por l…dades que pierdes cuando ni siquiera lo intentas.', 'Hazlo ahora. A veces "más tarde" se convierte en "nunca".', 'Tu actitud determina tu dirección.', 'No puedes cambiar el viento, pero puedes ajustar las velas.', 'La mejor manera de predecir el futuro es crearlo.', 'El primer paso para conseguir lo que quieres es tener el coraje de abandonar lo que no quieres.', 'No hay atajos para cualquier lugar que valga la pena.', 'La excelencia no es un acto, sino un hábito.', 'La única forma de hacer un gran trabajo es amar lo que haces.', 'Cree en ti mismo y todo será posible.', 'La confianza en uno mismo es el primer secreto del éxito.', 'El éxito no es la clave de la felicidad. La felici…to. Si amas lo que estás haciendo, tendrás éxito.', 'No hay sueños imposibles, solo personas que se rinden antes de intentarlo.', 'Haz lo que puedas, con lo que tengas, donde estés.', 'El único modo de hacer un gran trabajo es amar lo que haces.', 'La diferencia entre un sueño y un objetivo es un plan.', 'El éxito es la suma de pequeños esfuerzos repetidos día tras día.', 'La paciencia es la clave del éxito.', 'No busques fuera, todo lo que necesitas está dentro de ti.', 'La vida es demasiado corta para perder el tiempo en preocupaciones.', 'Si puedes soñarlo, puedes lograrlo.', 'No busques el éxito, busca ser valioso. El éxito lo seguirá.', 'La mejor venganza es un éxito masivo.', 'Si no te gusta algo, cámbialo. Si no puedes cambiarlo, cambia tu actitud.', 'La disciplina es el puente entre metas y logros.', 'No te preocupes por los fracasos, preocúpate por l…dades que pierdes cuando ni siquiera lo intentas.', 'Hazlo ahora. A veces "más tarde" se convierte en "nunca".', 'Tu actitud determina tu dirección.', 'No puedes cambiar el viento, pero puedes ajustar las velas.', 'La mejor manera de predecir el futuro es crearlo.', 'El primer paso para conseguir lo que quieres es tener el coraje de abandonar lo que no quieres.', 'No hay atajos para cualquier lugar que valga la pena.', 'La excelencia no es un acto, sino un hábito.', 'La única forma de hacer un gran trabajo es amar lo que haces.', 'Cree en ti mismo y todo será posible.', 'La confianza en uno mismo es el primer secreto del éxito.', 'El éxito no es la clave de la felicidad. La felici…to. Si amas lo que estás haciendo, tendrás éxito.', 'No hay sueños imposibles, solo personas que se rinden antes de intentarlo.', 'Haz lo que puedas, con lo que tengas, donde estés.', 'El único modo de hacer un gran trabajo es amar lo que haces.', 'La diferencia entre un sueño y un objetivo es un plan.', 'El éxito es la suma de peque']
+    let ctx = document.getElementById("c-tx")
+
+    let x = 0
+
+    function contenido() {
+        setInterval(() => {
+            ctx.textContent = oraciones[x]
+            x++
+            if (x == oraciones.length - 1) {
+                x = 0
+            }
+        }, 5000)
+
+    }
+
+    contenido()
+
+</script>
+
+</html>
