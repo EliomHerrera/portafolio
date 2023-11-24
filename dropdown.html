@@ -57,7 +57,7 @@
         margin: 1px;
     }
 
-    div a {
+    div>a {
         background: blue;
         padding: 10px;
         width: 59px;
@@ -101,6 +101,27 @@
 
     .m-d:hover li {
         display: block;
+    }
+
+    /* Estilos para móviles */
+    @media only screen and (max-width: 767px) {
+
+        /* Agrega aquí tus estilos para móviles */
+        .nav {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 1px;
+            padding: 20px;
+            background-color: rgb(17, 17, 19);
+
+
+        }
+
+        .nav a {
+            text-align: center;
+
+        }
+
     }
 </style>
 
