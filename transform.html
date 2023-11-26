@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        padding: 20px;
+        margin: 2px;
+        background-color: rgb(17, 17, 19);
+    }
+
+    .nav a {
+        padding: 10px;
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        background: white;
+    }
+
+    .nav a:hover {
+        background: rgb(202, 18, 18);
+    }
+
+    /* Estilos para móviles */
+    @media only screen and (max-width: 767px) {
+
+        /* Agrega aquí tus estilos para móviles */
+        .nav {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 1px;
+            padding: 20px;
+            background-color: rgb(17, 17, 19);
+        }
+
+        .nav a {
+            text-align: center;
+        }
+    }
+
+    .p1 {
+        width: 50px;
+        height: 50px;
+        background: blue;
+
+        &:hover {
+            transition: 1s;
+            transform: translate(120px) rotate(0.5turn);
+        }
+    }
+
+    .p2 {
+        width: 50px;
+        height: 50px;
+        background: red;
+
+        &:hover {
+            transition: 1s;
+            transform: rotate(0.5turn);
+        }
+    }
+
+    .p3 {
+        width: 50px;
+        height: 50px;
+        background: black;
+
+        &:hover {
+            transition: 1s;
+            transform: translate(0px, 100%)
+        }
+    }
+
+    .p4 {
+        width: 50px;
+        height: 50px;
+        background: green;
+
+        &:hover {
+            transition: 3s;
+            transform: translate(0px, 100%)
+        }
+
+
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <p>Eliom </p>
+    </div>
+
+    <nav class="nav">
+        <a href="/index.html">Inicio</a>
+    </nav>
+
+    <div class="xxx">
+        <div class="p1">
+
+        </div>
+
+        <div class="p2">
+
+        </div>
+
+        <div class="p3">
+
+        </div>
+
+        <div class="p4">
+            <div>hola</div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+<script>
+    console.log('run')
+</script>
+
+</html>

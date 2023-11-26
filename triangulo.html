@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav {
+        padding: 20px;
+        margin: 2px;
+        background-color: rgb(17, 17, 19);
+    }
+
+    .nav a {
+        padding: 10px;
+        margin: 10px;
+        text-decoration: none;
+        color: black;
+        background: white;
+    }
+
+    .nav a:hover {
+        background: rgb(202, 18, 18);
+    }
+
+    /* Estilos para móviles */
+    @media only screen and (max-width: 767px) {
+
+        /* Agrega aquí tus estilos para móviles */
+        .nav {
+            display: flex;
+            flex-flow: column wrap;
+            gap: 1px;
+            padding: 20px;
+            background-color: rgb(17, 17, 19);
+        }
+
+        .nav a {
+            text-align: center;
+
+        }
+    }
+
+    .contenido {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 10%;
+
+        &:hover .item-icon {
+            transform: rotate(0.5turn);
+            bottom: 15px;
+
+
+        }
+
+        &:hover .cont {
+            display: block;
+        }
+
+        .item-icon {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            border-left: 10px solid transparent;
+            border-top: 10px solid black;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid transparent;
+        }
+
+        .btn {
+            position: relative;
+            background: gray;
+            padding: 10px 40px;
+            border: 2px solid black;
+
+        }
+
+        .item {
+            padding: 20px;
+            margin: 1px;
+            width: 100%;
+            text-align: center;
+
+            .link {
+                text-decoration: none;
+                color: black;
+            }
+
+        }
+    }
+
+    .cont {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="container" class="container">
+        <p>Eliom</p>
+    </div>
+
+    <div>
+        <nav class="nav">
+            <a href="/index.html">Inicio</a>
+        </nav>
+    </div>
+    <div class="contenido">
+        <div class="btn">Eliom
+            <span class="item-icon">
+            </span>
+        </div>
+        <div class="cont">
+            <div class="item">
+                <a class="link" href=" #">eliom</a>
+            </div>
+
+            <div class="item">
+                <a class="link" href=" #">eliom</a>
+            </div>
+
+            <div class="item">
+                <a class="link" href=" #">eliom</a>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    console.log('run')
+</script>
+
+</html>
